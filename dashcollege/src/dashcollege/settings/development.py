@@ -42,6 +42,10 @@ INTERNAL_IPS = [
     '0.0.0.1',
 ]
 
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': lambda r: False,  # disables it
+    # '...
+}
 # Log everything to the logs directory at the top
 LOGFILE_ROOT = BASE_DIR.parent / 'logs'
 

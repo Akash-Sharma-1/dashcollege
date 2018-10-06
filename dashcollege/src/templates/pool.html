@@ -6,7 +6,7 @@
 {% block title %}{{ block.super }}About{% endblock %}
 
 {% block navbar-left %}
-  {% include "_navbar.html" with active_link="about" %}
+  {% include "_navbar.html" with active_link="pool:pool" %}
 {% endblock %}
 
 <!-- Benefits of the Django application -->
@@ -33,22 +33,25 @@
     </div>
     <div class="row">
       <div class="col-lg-4">
-        <div class="text-center"><img class="img-circle centered" src="" alt="profile pic"></div>
+        <div class="text-center"><img class="img-circle centered" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'site/img/ola.png'%}" alt="profile pic"></div>
         <p class="heavy text-center"></p>
         <h2>Cab</h2>
           <p></p>
+          <p><a class="btn btn-primary" href="{% url 'pool:cab' %}" role="button">View details &raquo;</a></p>
         </div>
       <div class="col-lg-4">
-        <div class="text-center"><img class="img-circle centered" src="" alt="profile pic"></div>
+        <div class="text-center"><img class="img-circle centered" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'site/img/pizza.png'%}" alt="profile pic"></div>
         <p class="heavy text-center"></p>
         <h2>Food</h2>
         <p></p>
+          <p><a class="btn btn-primary" href="{% url 'pool:food' %}" role="button">View details &raquo;</a></p>
       </div>
       <div class="col-lg-4">
-        <div class="text-center"><img class="img-circle centered" src="" alt="profile pic"></div>
+        <div class="text-center"><img class="img-circle centered" style='height: 100%; width: 100%; object-fit: contain' src="{% static 'site/img/1.png'%}" alt="profile pic"></div>
         <p class="heavy text-center"></p>
         <h2>Other</h2>
           <p></p>
+          <p><a class="btn btn-primary" href="{% url 'pool:others' %}" role="button">View details &raquo;</a></p>
       </div>
     </div>
     </div>

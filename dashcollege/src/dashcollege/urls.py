@@ -16,7 +16,7 @@ urlpatterns = [
     path('about/', views.AboutPage.as_view(), name='about'),
     path('users/', include(profiles.urls)),
     path('admin/', admin.site.urls),
-    path('', include('pool.urls')),
+    path('', include(pool.urls)),
     path('', include(accounts.urls)),
 ]
 
